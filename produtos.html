@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produtos - Sol&Semente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌻 Sol&Semente</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="produtos">
+    <h1>Nossos Produtos</h1>
+    <div class="lista-produtos">
+      <div class="produto">
+        <img src="buquederosasvermelhas.png" alt="Buquê de Rosas" style="width: 150px; ">
+        <h3>Buquê de Rosas</h3
+        <p>R$ 79,90</p>
+        <button onclick="adicionarCarrinho('Buquê de Rosas')">Adicionar</button>
+      </div>
+
+      <div class="produto">
+        <img src="https://images.tcdn.com.br/img/img_prod/487611/lindos_girassois_404_1_20230109105257.jpg" alt="Girassol">
+        <h3>Arranjo de Girassol</h3>
+        <p>R$ 79,90</p>
+        <button onclick="adicionarCarrinho('Arranjo de Girassol')">Adicionar</button>
+      </div>
+
+      <div class="produto">
+        <img src="https://st2.depositphotos.com/1393581/7023/i/950/depositphotos_70238109-stock-photo-bouquet-of-violets.jpg" alt="Buquê de Violeta">
+        <h3>Buquê de Violeta</h3>
+        <p>R$ 89,90</p>
+        <button onclick="adicionarCarrinho('Buquê de Violeta')">Adicionar</button>
+      </div>
+
+      <div class="produto">
+        <img src="https://cdn.awsli.com.br/600x700/601/601454/produto/61064812/1a1f014f0d.jpg" alt="Buquê de Lírios Branco">
+        <h3>Buquê de Lírios Branco</h3>
+        <p>R$ 99,90</p>
+        <button onclick="adicionarCarrinho('Buquê de Lírios Branco')">Adicionar</button>
+      </div>
+
+      <div class="produto">
+        <img src="https://static.cestasmichelli.com.br/images/product/25134gg.jpg?ims=750x750" alt="Buquê de Margaridas">
+        <h3>Buquê de Margaridas</h3>
+        <p>R$ 60,00</p>
+        <button onclick="adicionarCarrinho('Margaridas')">Adicionar</button>
+      </div>
+      <div class="produto">
+        <img src="https://www.paulistaflores.com.br/image/cache/data/produtos/buques/bq12ne---buque-com-12-rosas-negras/buque-de-rosas-negras-4-926x926.jpg" alt="Buquê de Rosas Negras">
+        <h3>Buquê de Rosas Negras</h3>
+        <p>R$119,99</p>
+        <button onclick="adicionarCarrinho('Buquê de Rosas Negras')">Adicionar</button>
+    </div>
+     <div class="produto">
+        <img src="https://images.tcdn.com.br/img/img_prod/1080756/buque_de_rosa_azul_delicadeza_e_seu_nome_12_rosas_importadas_3087_1_f5d042762c730bdb1e2d7d23b4122bf6_20241203115700.jpg" alt="">
+        <h3>Buquê de rosas azuis</h3>
+        <p>R$116,90</p>
+        <button onclick="adicionarCarrinho('Buquê de rosas azuis')">Adicionar</button>
+    </div>
+
+    <div class="produto">
+        <img src="https://bonfimflores.com.br/wp-content/uploads/2021/06/AZALEIA.jpg" alt="Azalèia">
+        <h3>Azalèia</h3>
+        <p>R$149,99</p>
+        <button onclick="adicionarCarrinho('Azalèia')">Adicionar</button>
+    </div>
+
+     <div class="produto">
+        <img src="https://img.freepik.com/fotos-premium/bonsai-figueira-com-fundo-branco_631068-1638.jpg" alt="Bonsai figueira">
+        <h3>Bonsai figueira</h3>
+        <p>R$169,99</p>
+        <button onclick="adicionarCarrinho('Bonsai figueira')">Adicionar</button>
+    </div>
+
+     <div class="produto">
+        <img src="https://www.galaxcommerce.com.br/sistema/upload/3295/produtos/arranjo-de-astromelia-branca_2022-03-04_12-41-55_0_408.jpeg" alt="Arranjo de Astromélia Branca">
+        <h3>Arranjo de Astromélia Branca</h3>
+        <p>R$120,90</p>
+        <button onclick="adicionarCarrinho('Arranjo de Astromélia Branca')">Adicionar</button>
+    </div>
+
+    <div class="produto">
+        <img src="https://st4.depositphotos.com/8284530/23821/i/450/depositphotos_238211184-stock-photo-bouquet-flowers-white-background.jpg" alt="Buquê de Flores Mistas G">
+        <h3>Buquê de Flores Mistas G</h3>
+        <p>R$179,90</p>
+        <button onclick="adicionarCarrinho('Buquê de Flores Mistas G')">Adicionar</button>
+    </div>
+
+     <div class="produto">
+        <img src="https://urbanstems.com/cdn/shop/files/Peony_V2_MainImage_PDP.jpg?v=1737972145&width=420" alt="Buquê de Peônia">
+        <h3>Buquê de Peônia</h3>
+        <p>R$179,99</p>
+        <button onclick="adicionarCarrinho('Buquê de Peônia')">Adicionar</button>
+    </div>
+  </main>
+
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Email: solesemente@gmail.com</p>
+    <p>Telefone: (85) 1234-4567</p>
+    <p> Instagram: sol.esemente</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
