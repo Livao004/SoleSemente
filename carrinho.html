@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Seu Carrinho - Sol&Semente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Seu Carrinho</h1>
+  <ul id="lista-carrinho"></ul>
+  <p id="total">Total: R$ 0,00</p>
+
+  <button onclick="limparCarrinho()">Limpar Carrinho</button>
+  <button onclick="finalizarPedido()">Finalizar Pedido</button>
+
+  <script>
+    function carregarCarrinho() {
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      let lista = document.getElementById("lista-carrinho");
+      let total = 0;
+      lista.innerHTML = "";
+
+      carrinho.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        lista.appendChild(li);
+        total += item.preco;
+      });
+
+      document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
+    }
+
+    function limparCarrinho() {
+      localStorage.removeItem("carrinho");
+      carregarCarrinho();
+    }
+
+    function finalizarPedido() {
+      alert("Pedido enviado! Obrigado por comprar na Sol&Semente 🌻");
+      localStorage.removeItem("carrinho");
+      carregarCarrinho();
+    }
+
+    // Chamar ao carregar a página
+    carregarCarrinho();
+  </script>
+</body>
+</html>

@@ -28,10 +28,18 @@ header {
 }
 
 .logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: hwb(0 99% 0%); /* vermelho */
+  display: flex;
+  align-items: center;
 }
+
+.logo img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;      /* Garante que a imagem preencha bem o círculo */
+  border-radius: 50%;     /* Torna a imagem redonda */
+  border: 2px solid #2e7d32; /* (opcional) borda verde ao redor */
+}
+
 
 nav a {
   margin-left: 20px;
@@ -236,3 +244,5 @@ form button:hover {
   font-size: 16px;
   line-height: 1.5;
 }
+
+
