@@ -14,10 +14,10 @@
   <img src="Logo Floricultura Elegante Verde e Bege (1).png" alt="Logo Sol&Semente"> </a>
 </div>
     <nav>
-      <a href="index.html">Início</a>
+    <a href="index.html">Início</a>
       <a href="produtos.html">Produtos</a>
+      <a href="dicas.html">Dicas</a>
       <a href="contato.html">Contato</a>
-      <a href="carrinho.html"> Carrinho</a>
     </nav>
   </header>
 
@@ -105,6 +105,21 @@
         <p>R$179,99</p>
         <button onclick="adicionarCarrinho('Arranjo de Peônia')">Adicionar</button>
     </div>
+
+     <div class="produto">
+        <img src="153458477153386503-removebg-preview.png" alt="Buquê de Mosquitinhos">
+        <h3>Flor "Mosquitinho"</h3>
+        <p>R$59,92</p>
+        <button onclick="adicionarCarrinho('Buquê de Mosquitinhos')">Adicionar</button>
+    </div>
+
+
+
+
+
+
+
+
   </main>
 
   <section id="contato" class="contato">
@@ -113,14 +128,6 @@
     <p> <a href="https://www.instagram.com/sol.esemente/" style="color: black;"> sol.esemente</p> </a>
   </section>
 
-<script>
-  function adicionarCarrinho(nome) {
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-    carrinho.push({ nome });
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert(`${nome} foi adicionado ao carrinho!`);
-  }
-</script>
 
 
 

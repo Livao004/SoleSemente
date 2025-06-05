@@ -18,3 +18,26 @@ function enviarFormulario(event) {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const titulos = document.querySelectorAll('.titulo-dica');
+
+  titulos.forEach(titulo => {
+    titulo.addEventListener('click', () => {
+      const texto = titulo.nextElementSibling;
+      const seta = titulo.querySelector('.seta');
+
+      texto.classList.toggle('ativa');
+      seta.classList.toggle('girar');
+    });
+  });
+});
+
+
+  function toggleHorario() {
+    const bloco = document.getElementById('tabelaHorario');
+    const seta = document.getElementById('setaHorario');
+    bloco.classList.toggle('ativa');
+    seta.classList.toggle('girar');
+  }
+
+
