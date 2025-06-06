@@ -40,4 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     seta.classList.toggle('girar');
   }
 
+    function toggleHorario() {
+      const bloco = document.getElementById('tabelaHorario');
+      const seta = document.getElementById('setaHorario');
+      bloco.classList.toggle('ativa');
+      seta.classList.toggle('girar');
+    }
 
