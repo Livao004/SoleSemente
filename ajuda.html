@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajuda - Sol&Semente</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      margin-top: 100px;
+      padding: 40px 5%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .coluna {
+      flex: 1 1 500px;
+    }
+
+    .secao-ajuda {
+      margin-bottom: 40px;
+      background-color: #f9fff9;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #c8e6c9;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .secao-ajuda h2 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 12px 0;
+      cursor: pointer;
+    }
+
+    .faq-item h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      color: #2e7d32;
+    }
+
+    .faq-resposta {
+      display: none;
+      margin-top: 8px;
+      color: #444;
+    }
+
+    .faq-item.ativo .faq-resposta {
+      display: block;
+    }
+
+    .form-contato-ajuda {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .form-contato-ajuda input,
+    .form-contato-ajuda textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .form-contato-ajuda button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    ul.lista-compras {
+      padding-left: 18px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    ul.lista-compras li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logo Floricultura Elegante Verde e Bege (1).png" alt="Logo Sol&Semente" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="ajuda.html" class="ativo">Ajuda</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Coluna 1: Perguntas Frequentes + Informações de Compra -->
+    <div class="coluna">
+
+      <section class="secao-ajuda">
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-item">
+          <h3>Como posso acompanhar meu pedido? <span class="seta">▼</span></h3>
+          <div class="faq-resposta">
+            Você receberá um código de rastreio por e-mail assim que seu pedido for despachado.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>Vocês entregam no mesmo dia? <span class="seta">▼</span></h3>
+          <div class="faq-resposta">
+            Sim, para pedidos confirmados até 14h e dentro da região metropolitana, entregamos no mesmo dia.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>Como funcionam as promoções sazonais? <span class="seta">▼</span></h3>
+          <div class="faq-resposta">
+            Em datas especiais (como Dia das Mães ou Namorados), nossos produtos entram em promoção automática.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>Posso personalizar meu buquê? <span class="seta">▼</span></h3>
+          <div class="faq-resposta">
+            Sim! Entre em contato conosco via WhatsApp e montamos o arranjo conforme seu desejo.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>Posso enviar com cartão ou mensagem? <span class="seta">▼</span></h3>
+          <div class="faq-resposta">
+            Sim, você pode incluir uma mensagem personalizada durante a finalização do pedido.
+          </div>
+        </div>
+      </section>
+
+      <section class="secao-ajuda">
+        <h2>Sobre compras no site</h2>
+        <p>
+          Garantimos uma compra segura e tranquila:
+        </p>
+        <ul class="lista-compras">
+          <li>🔒 Site com certificado SSL e ambiente criptografado.</li>
+          <li>💳 Pagamentos via plataformas seguras (PagSeguro, MercadoPago, Pix).</li>
+          <li>📦 Produtos embalados com cuidado e entregas com rastreamento.</li>
+          <li>💬 Suporte rápido via e-mail e redes sociais.</li>
+          <li>✅ Garantia de reembolso em caso de erro no pedido.</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- Coluna 2: Formulário de Contato -->
+    <div class="coluna">
+
+      <section class="secao-ajuda">
+        <h2>Fale Conosco</h2>
+
+        <form class="form-contato-ajuda">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <textarea name="mensagem" rows="5" placeholder="Como podemos te ajudar?" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+
+        <div style="margin-top: 20px;">
+          <p><strong>Email:</strong> <a href="mailto:solesemente@gmail.com">solesemente@gmail.com</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sol.esemente/" target="_blank">@sol.esemente</a></p>
+          <p><strong>Telefone:</strong> (11) 91234-5678</p>
+          <p><strong>Horário de atendimento:</strong> Segunda a Sábado, das 8h às 18h</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-container">
+      <div class="rodape-logo">
+        <img src="Logo Floricultura Elegante Verde e Bege (1).png" alt="Logo Sol&Semente" />
+        <p>Sol&Semente - Cultivando encanto com responsabilidade.</p>
+      </div>
+      <div class="rodape-contato">
+        <h4>Contato</h4>
+        <p>Email: <a href="mailto:solesemente@gmail.com" style="color: white;">solesemente@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sol.esemente/" target="_blank" style="color: white;">@sol.esemente</a></p>
+      </div>
+    </div>
+    <div class="rodape-direitos">
+      <p>&copy; 2025 Sol&Semente. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Perguntas frequentes toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('ativo');
+      });
+    });
+  </script>
+
+</body>
+</html>
