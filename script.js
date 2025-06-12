@@ -137,3 +137,16 @@ function limparCarrinho() {
     atualizarCarrinhoVisual();
   }
 }
+
+  function adicionarAoCarrinho() {
+    // Aqui você poderia adicionar a lógica de adicionar ao carrinho se necessário
+
+    // Exibe a mensagem de sucesso
+    const mensagem = document.getElementById('mensagem-sucesso');
+    mensagem.style.display = 'block';
+
+    // Esconde a mensagem depois de 3 segundos (opcional)
+    setTimeout(() => {
+      mensagem.style.display = 'none';
+    }, 3000);
+  }

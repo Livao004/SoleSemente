@@ -670,3 +670,78 @@ form label {
 .botao-limpar:hover {
   background-color: #d32f2f;
 }
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+.produto h3 {
+  margin: 10px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.produto p {
+  margin: 0 10px 10px;
+  font-weight: bold;
+  color: #2a7b4f;
+}
+
+.produto .descricao {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.produto.expansivo .descricao {
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+
+.produto button {
+  margin: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: none;
+  background-color: #2a7b4f;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.produto button:hover {
+  background-color: #225f3e;
+}
+
+.imagembonsai{
+  width: 200px;
+  height: 200px;
+}
