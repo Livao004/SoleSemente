@@ -105,6 +105,27 @@ nav a:hover {
   object-fit: cover;
   border-radius: 6px;
 }
+.mensagem-confirmacao {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+  animation: fadeInOut 2.5s ease;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  10%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
 
 
 .produto h3 {
@@ -672,7 +693,7 @@ form label {
 }
 .lista-produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 0 20px;
 }
@@ -720,10 +741,6 @@ form label {
   color: #555;
 }
 
-.produto.expansivo .descricao {
-  max-height: 150px;
-  margin-bottom: 10px;
-}
 
 .produto button {
   margin: 10px;
@@ -741,7 +758,24 @@ form label {
   background-color: #225f3e;
 }
 
-.imagembonsai{
-  width: 200px;
-  height: 200px;
+.mensagem-confirmacao {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+  animation: fadeInOut 2.5s ease;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  10%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }
