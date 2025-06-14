@@ -12,10 +12,21 @@ function obterPrecoProduto(nome) {
   const precos = {
     'Buquê de Rosas': 79.90,
     'Buquê de Girassol': 69.90,
-    // Adicione os demais produtos aqui
+    'buquê de begônia': 89.90,
+    'Buquê de Lírios Branco': 99.90,
+    'Margaridas': 60.00,
+    'Buquê de Rosas Negras': 119.99,
+    'Arranjo de rosas azuis': 116.90,
+    'Bonsai de Azaleia': 149.99,
+    'Bonsai figueira': 169.99,
+    'Arranjo de Astromélia Branca': 120.90,
+    'Buquê de Gérbera': 179.90,
+    'Arranjo de Peônia': 179.99,
+    'Buquê de Mosquitinhos': 59.92
   };
   return precos[nome] || 0;
 }
+
 
 function adicionarCarrinho(nomeProduto) {
   const preco = obterPrecoProduto(nomeProduto);
