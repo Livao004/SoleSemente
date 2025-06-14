@@ -27,6 +27,14 @@
     <section class="produtos">
       <h2>Nossos Produtos</h2>
 
+      <!-- Novo botão do carrinho com contador -->
+      <div class="botao-carrinho-wrapper">
+        <a href="carrinho.html" class="botao-carrinho-normal">
+          <img src="carrinho.png" alt="Carrinho de Compras" />
+          <span id="contador-carrinho">0</span>
+        </a>
+      </div>
+
       <div class="lista-produtos">
         <div class="produto">
           <a href="produtos-rosas.html"> <img src="rosas-flores.jpg" alt="Buquê de Rosas"> </a> 
@@ -43,7 +51,7 @@
         </div>
 
         <div class="produto">
-          <a href="produtos-buquê de begônia.html"> <img src="desgracaaaa.png" alt="Begônia"> </a>
+          <a href="produtos-buquê de begônia.html"> <img src="begonia-flores.jpg" alt="Begônia"> </a>
           <h3>Buquê de Begônia</h3>
           <p>R$ 89,90</p>
           <button onclick="adicionarCarrinho('buquê de begônia')">Adicionar ao carrinho</button>
@@ -64,14 +72,14 @@
         </div>
 
         <div class="produto">
-          <a href="produtos-Buquê de Rosas Negras.html"> <img src="Buquê de Rosas Negras.png" alt="Rosas Negras"> </a>
+          <a href="produtos-Buquê de Rosas Negras.html"> <img src="rosasnegras-flores.jpg" alt="Rosas Negras"> </a>
           <h3>Buquê de Rosas Negras</h3>
           <p>R$ 119,99</p>
           <button onclick="adicionarCarrinho('Buquê de Rosas Negras')">Adicionar ao carrinho</button>
         </div>
 
         <div class="produto">
-          <a href="produtos-Arranjo de rosas azuis.html"> <img src="Buquê de rosas azuis.png" alt="Rosas Azuis"> </a>
+          <a href="produtos-Arranjo de rosas azuis.html"> <img src="rosasazuis-flores.jpg" alt="Rosas Azuis"> </a>
           <h3>Arranjo de rosas azuis</h3>
           <p>R$ 116,90</p>
           <button onclick="adicionarCarrinho('Arranjo de rosas azuis')">Adicionar ao carrinho</button>
@@ -122,35 +130,8 @@
       </div>
     </section>
 
-    <!-- Carrinho de Compras -->
-    <section id="carrinho-integrado">
-      <h2>Carrinho de Compras</h2>
-      <ul id="lista-carrinho"></ul>
-      <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
 
-      <form id="form-pagamento" onsubmit="finalizarCompra(event)">
-        <div class="campo-form">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
-        </div>
-
-        <div class="campo-form">
-          <label for="pagamento">Forma de Pagamento:</label>
-          <select id="pagamento" required>
-            <option value="">Selecione</option>
-            <option value="Pix">Pix</option>
-            <option value="Cartão">Cartão de Crédito</option>
-            <option value="Boleto">Boleto</option>
-          </select>
-        </div>
-
-        <button type="submit" class="botao-finalizar">Finalizar Compra</button>
-        <button type="button" onclick="limparCarrinho()" class="botao-limpar">Limpar Carrinho</button>
-      </form>
-    </section>
-
-    <!-- Mensagem flutuante de confirmação -->
-    <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+  <div id="mensagem-confirmacao" class="mensagem-confirmacao">
       Produto adicionado ao carrinho!
     </div>
   </main>

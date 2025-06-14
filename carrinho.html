@@ -1,48 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Seu Carrinho - Sol&Semente</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho - Sol&Semente</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Seu Carrinho</h1>
-  <ul id="lista-carrinho"></ul>
-  <p id="total">Total: R$ 0,00</p>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Logo Floricultura Elegante Verde e Bege (1).png" alt="Logo Sol&Semente" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="ajuda.html">Ajuda</a>
+    </nav>
+  </header>
 
-  <button onclick="limparCarrinho()">Limpar Carrinho</button>
-  <button onclick="finalizarPedido()">Finalizar Pedido</button>
+  <main>
+    <section id="carrinho-integrado">
+      <h2>Seu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
 
-  <script>
-    function carregarCarrinho() {
-      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-      let lista = document.getElementById("lista-carrinho");
-      let total = 0;
-      lista.innerHTML = "";
+      <form id="form-pagamento" onsubmit="finalizarCompra(event)">
+        <div class="campo-form">
+          <label for="nome">Nome do Cliente:</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
 
-      carrinho.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
-        lista.appendChild(li);
-        total += item.preco;
-      });
+        <div class="campo-form">
+          <label for="endereco">Endereço de Entrega:</label>
+          <input type="text" id="endereco" name="endereco" required />
+        </div>
 
-      document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
-    }
+        <div class="campo-form">
+          <label for="pagamento">Forma de Pagamento:</label>
+          <select id="pagamento" required>
+            <option value="">Selecione</option>
+            <option value="Pix">Pix</option>
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+            <option value="Boleto">Boleto</option>
+          </select>
+        </div>
 
-    function limparCarrinho() {
-      localStorage.removeItem("carrinho");
-      carregarCarrinho();
-    }
+        <div class="campo-form">
+          <label for="presente">É para presente?</label>
+          <select id="presente" name="presente">
+            <option value="nao">Não</option>
+            <option value="sim">Sim</option>
+          </select>
+        </div>
 
-    function finalizarPedido() {
-      alert("Pedido enviado! Obrigado por comprar na Sol&Semente 🌻");
-      localStorage.removeItem("carrinho");
-      carregarCarrinho();
-    }
+        <div class="campo-form">
+          <label for="mensagem">Mensagem personalizada:</label>
+          <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+        </div>
 
-    // Chamar ao carregar a página
-    carregarCarrinho();
-  </script>
+        <div class="campo-form">
+          <label for="cupom">Cupom de desconto:</label>
+          <input type="text" id="cupom" name="cupom" placeholder="Digite seu cupom" />
+        </div>
+
+        <button type="submit" class="botao-finalizar">Finalizar Compra</button>
+        <button type="button" onclick="limparCarrinho()" class="botao-limpar">Limpar Carrinho</button>
+      </form>
+    </section>
+
+    <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+      Produto adicionado ao carrinho!
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-container">
+      <div class="rodape-logo">
+        <img src="Logo Floricultura Elegante Verde e Bege (1).png" alt="Logo Sol&Semente" />
+        <p>Sol&Semente - Cultivando encanto com responsabilidade.</p>
+      </div>
+      <div class="rodape-contato">
+        <h4>Contato</h4>
+        <p>Email: <a href="mailto:solesemente@gmail.com" style="color: white;">solesemente@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sol.esemente/" target="_blank" style="color: white;">@sol.esemente</a></p>
+      </div>
+    </div>
+    <div class="rodape-direitos">
+      <p>&copy; 2025 Sol&Semente. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
