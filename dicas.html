@@ -105,6 +105,13 @@
   </div>
 </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Perguntas frequentes toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('ativo');
+      });
+    });
+  </script>
 </body>
 </html>
