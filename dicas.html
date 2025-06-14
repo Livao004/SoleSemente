@@ -105,13 +105,17 @@
   </div>
 </footer>
 
-  <script>
-    // Perguntas frequentes toggle
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('ativo');
-      });
+<script>
+  document.querySelectorAll('.titulo-dica').forEach(titulo => {
+    titulo.addEventListener('click', () => {
+      const texto = titulo.nextElementSibling;
+      const seta = titulo.querySelector('.seta');
+      
+      texto.classList.toggle('ativa');
+      seta.classList.toggle('girar');
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
