@@ -779,3 +779,26 @@ form label {
   90%  { opacity: 1; }
   100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }
+
+.produto {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.produto img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
