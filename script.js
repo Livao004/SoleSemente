@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (salvo) {
     carrinho = JSON.parse(salvo);
   }
-
   atualizarCarrinhoVisual();
 });
 
@@ -26,9 +25,7 @@ function obterPrecoProduto(nome) {
     'Buquê de Mosquitinhos': 59.92,
     'Buquê de Tulipas': 159.90,
     'Orquídeas': 89.90
-
   };
-  
   return precos[nome] || 0;
 }
 
@@ -45,28 +42,34 @@ function salvarCarrinho() {
 }
 
 function atualizarCarrinhoVisual() {
-  // Atualiza lista no carrinho.html, se existir
   const lista = document.getElementById('lista-carrinho');
   const totalSpan = document.getElementById('total');
+
   if (lista && totalSpan) {
     lista.innerHTML = '';
     let total = 0;
 
-    carrinho.forEach(item => {
+    carrinho.forEach((item, index) => {
       total += item.preco;
       const li = document.createElement('li');
-      li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+      li.innerHTML = `${item.nome} - R$ ${item.preco.toFixed(2)} 
+        <button class="botao-remover" onclick="removerItem(${index})">Remover</button>`;
       lista.appendChild(li);
     });
 
     totalSpan.textContent = total.toFixed(2);
   }
 
-  // Atualiza contador em todas as páginas
   const contador = document.getElementById('contador-carrinho');
   if (contador) {
     contador.textContent = carrinho.length;
   }
+}
+
+function removerItem(index) {
+  carrinho.splice(index, 1);
+  salvarCarrinho();
+  atualizarCarrinhoVisual();
 }
 
 function mostrarMensagemConfirmacao(texto) {
@@ -83,7 +86,6 @@ function mostrarMensagemConfirmacao(texto) {
 
 function finalizarCompra(event) {
   event.preventDefault();
-
   const nome = document.getElementById('nome').value;
   const pagamento = document.getElementById('pagamento').value;
 
@@ -93,7 +95,6 @@ function finalizarCompra(event) {
   }
 
   alert(`Obrigado, ${nome}! Sua compra com pagamento via ${pagamento} foi finalizada.`);
-
   carrinho = [];
   salvarCarrinho();
   atualizarCarrinhoVisual();
