@@ -10,7 +10,7 @@ body {
   color: #333;
   padding-top: 80px; /* ✅ Manter este */
 }
-
+ 
 /* Cabeçalho fixo */
 header {
   position: fixed;
@@ -504,7 +504,7 @@ form label {
 }
 
 .seta.girar {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .post-detalhe {

@@ -212,12 +212,14 @@
   </footer>
 
   <script>
-    // Perguntas frequentes toggle
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('ativo');
-      });
-    });
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('ativo');
+    const seta = item.querySelector('.seta');
+    if (seta) seta.classList.toggle('girar');
+  });
+});
+
   </script>
 
 </body>
