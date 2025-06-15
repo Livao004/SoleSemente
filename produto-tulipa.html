@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buquê de Tulipas - Sol&Semente</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -22,24 +23,34 @@
     </nav>
   </header>
 
+ 
   <main style="margin-top: 100px; padding: 20px;">
     <div class="produto-detalhado" style="max-width: 1000px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-      <img src="tulipa-flores.jpg" alt="Buquê de Tulipas" style="width: 300px; border-radius: 8px;">
+      <img src="tulipas-flores.jpg" alt="Buquê de Tulipas" style="width: 300px; border-radius: 8px;">
 
       <div>
         <h1 style="color: #2e7d32;">Buquê de Tulipas</h1>
-        <p style="font-size: 1.2rem; color: #555;">R$ 109,90</p>
+        <p style="font-size: 1.2rem; color: #555;">R$ 159,90</p>
         <p style="margin: 15px 0; line-height: 1.6;">
           Elegantes e sofisticadas, as tulipas transmitem sentimentos nobres como amor verdadeiro, carinho e renovação. Este buquê é ideal para surpreender em datas especiais ou decorar com delicadeza ambientes modernos e clássicos.
         </p>
 
+     <button class="botao-adicionar" onclick="adicionarCarrinho('Buquê de Tulipas')">Adicionar ao carrinho</button>
+
         <br><br>
-        <a href="produtos.html" style="text-decoration: none; color: #2e7d32;">← Ver outros produtos</a>
-        <br>
-        <a href="index.html" style="text-decoration: none; color: #2e7d32;">← Voltar para o início </a>
+      <a href="produtos.html" class="link-voltar">← Ver outros produtos</a>
+<br>
+<a href="index.html" class="link-voltar">← Voltar para o início</a>
+
+
+
       </div>
     </div>
   </main>
+
+  <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+    Produto adicionado ao carrinho!
+  </div>
 
   <footer class="rodape">
     <div class="rodape-container">
@@ -57,6 +68,5 @@
       <p>&copy; 2025 Sol&Semente. Todos os direitos reservados.</p>
     </div>
   </footer>
-
 </body>
 </html>
