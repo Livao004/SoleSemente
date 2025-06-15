@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buquê de Rosas - Sol&Semente</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer> </script>
 </head>
 <body>
 
@@ -29,7 +30,7 @@
 
       <div>
         <h1 style="color: #2e7d32;">Arranjo de Peônia</h1>
-        <p style="font-size: 1.2rem; color: #555;">R$ 79,90</p>
+        <p style="font-size: 1.2rem; color: #555;">R$ 179,90</p>
         <p style="margin: 15px 0; line-height: 1.6;">
           Luxo e romantismo em forma de flor! 
           Com pétalas volumosas e perfume suave, o buquê de peônias é perfeito para encantar em ocasiões especiais. 
@@ -40,12 +41,22 @@
     
 
         <br><br>
-        <a href="produtos.html" style="text-decoration: none; color: #2e7d32;">← Ver outros produtos</a>
-        <br>
-        <a href="index.html" style="text-decoration: none; color: #2e7d32;">← Voltar para o início </a>
+          <button class="botao-adicionar" onclick="adicionarCarrinho('Arranjo de Peônia')">Adicionar ao carrinho</button>
+
+        <br><br>
+      <a href="produtos.html" class="link-voltar">← Ver outros produtos</a>
+<br>
+<a href="index.html" class="link-voltar">← Voltar para o início</a>
+
+
       </div>
     </div>
   </main>
+
+  <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+    Produto adicionado ao carrinho!
+  </div>
+
 
   <footer class="rodape">
     <div class="rodape-container">
