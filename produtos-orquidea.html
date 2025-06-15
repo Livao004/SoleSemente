@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buquê de Orquídeas - Sol&Semente</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer> </script>
 </head>
 <body>
 
@@ -28,18 +29,28 @@
 
       <div>
         <h1 style="color: #2e7d32;">Buquê de Orquídeas</h1>
-        <p style="font-size: 1.2rem; color: #555;">R$ 139,90</p>
+        <p style="font-size: 1.2rem; color: #555;">R$ 89,90</p>
         <p style="margin: 15px 0; line-height: 1.6;">
           Exóticas e sofisticadas, as orquídeas encantam pela sua elegância e simbolismo de força, beleza e amor refinado. Perfeito para impressionar com classe em ocasiões especiais ou transmitir sentimentos profundos com sutileza.
         </p>
 
         <br><br>
-        <a href="produtos.html" style="text-decoration: none; color: #2e7d32;">← Ver outros produtos</a>
-        <br>
-        <a href="index.html" style="text-decoration: none; color: #2e7d32;">← Voltar para o início </a>
+        <button class="botao-adicionar" onclick="adicionarCarrinho('Orquídeas')">Adicionar ao carrinho</button>
+
+        <br><br>
+      <a href="produtos.html" class="link-voltar">← Ver outros produtos</a>
+<br>
+<a href="index.html" class="link-voltar">← Voltar para o início</a>
+
+
       </div>
     </div>
   </main>
+
+  <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+    Produto adicionado ao carrinho!
+  </div>
+
 
   <footer class="rodape">
     <div class="rodape-container">
