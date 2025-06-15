@@ -65,11 +65,14 @@
         <div class="campo-form">
           <label for="cupom">Cupom de desconto:</label>
           <input type="text" id="cupom" name="cupom" placeholder="Digite seu cupom" />
+          <button type="button" onclick="aplicarCupom()" class="botao-aplicar-cupom">Aplicar Cupom</button>
         </div>
 
         <button type="submit" class="botao-finalizar">Finalizar Compra</button>
         <button type="button" onclick="limparCarrinho()" class="botao-limpar">Limpar Carrinho</button>
       </form>
+
+      <a href="produtos.html" class="botao-voltar-produtos">← Voltar para produtos</a>
     </section>
 
     <div id="mensagem-confirmacao" class="mensagem-confirmacao">
