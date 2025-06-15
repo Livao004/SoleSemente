@@ -10,7 +10,7 @@ body {
   color: #333;
   padding-top: 80px; /* ✅ Manter este */
 }
-
+ 
 /* Cabeçalho fixo */
 header {
   position: fixed;
@@ -504,7 +504,7 @@ form label {
 }
 
 .seta.girar {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .post-detalhe {
@@ -790,10 +790,11 @@ form label {
 
 .produto img {
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   width: 100%;
   max-width: 100%;
+  background-color: #fff;
 }
 
 .lista-produtos {
@@ -886,43 +887,4 @@ form label {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.link-voltar {
-  display: inline-block;
-  margin-top: 12px;
-  color: #2e7d32;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 8px 12px;
-  border: 2px solid #2e7d32;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.link-voltar:hover {
-  background-color: #2e7d32;
-  color: white;
-}
-
-.botao-adicionar {
-  background-color: #2e7d32;         /* Verde escuro */
-  color: white;                      /* Texto branco */
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.botao-adicionar:hover {
-  background-color: #1b5e20;         /* Verde ainda mais escuro no hover */
-  transform: scale(1.03);
-}
-
-.botao-adicionar:active {
-  transform: scale(0.97);
 }
